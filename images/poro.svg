@@ -1,21 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 340" role="img" aria-labelledby="title description">
   <title id="title">Joulupukin poro</title>
-  <desc id="description">Ystävällinen ruskea poro, jolla on suuret sarvet ja punainen kaulahuivi.</desc>
-  <g fill="none" stroke="#8e633e" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
-    <path d="M136 93c-24-20-37-39-35-63m1 19L78 37m28 0 16-19"/>
-    <path d="M184 93c24-20 37-39 35-63m-1 19 24-12m-28 0-16-19"/>
+  <desc id="description">Luonnollisen näköinen piirretty poro, jolla on ruskea talviturkki, haarautuvat samettisarvet, vaalea kuono ja punainen huivi.</desc>
+  <defs>
+    <linearGradient id="fur" x1=".15" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#c99462"/>
+      <stop offset=".46" stop-color="#a8754d"/>
+      <stop offset="1" stop-color="#70482f"/>
+    </linearGradient>
+    <linearGradient id="face" x1=".24" y1="0" x2=".75" y2="1">
+      <stop offset="0" stop-color="#c18a59"/>
+      <stop offset=".58" stop-color="#9c6945"/>
+      <stop offset="1" stop-color="#805437"/>
+    </linearGradient>
+    <linearGradient id="muzzle" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#f8e6ca"/>
+      <stop offset="1" stop-color="#d9b891"/>
+    </linearGradient>
+    <linearGradient id="scarf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#df4c52"/>
+      <stop offset="1" stop-color="#9d1c2a"/>
+    </linearGradient>
+    <radialGradient id="shine" cx=".35" cy=".2">
+      <stop stop-color="#fff" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="165%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#563821" flood-opacity=".16"/>
+    </filter>
+    <clipPath id="head-clip">
+      <path d="M190 78c-58 0-91 40-91 103 0 43 14 74 40 90 14 8 32 12 51 12s37-4 51-12c26-16 40-47 40-90 0-63-33-103-91-103z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="190" cy="318" rx="120" ry="10" fill="#6c3e32" opacity=".1"/>
+  <g fill="#67472f" stroke="#67472f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M145 109c-13-11-21-26-26-43l-29-7c-7-2-10-9-6-14 4-5 9-4 14 0l19 6-14-18c-4-5-1-13 5-14 5-1 8 2 11 6l14 19-1-27c0-7 5-11 10-8 4 2 5 6 5 11l1 34 17-16c5-5 12-1 11 5 0 3-2 5-5 8l-22 21c3 15 10 26 21 34z" stroke-width="2"/>
+    <path d="M235 109c13-11 21-26 26-43l29-7c7-2 10-9 6-14-4-5-9-4-14 0l-19 6 14-18c4-5 1-13-5-14-5-1-8 2-11 6l-14 19 1-27c0-7-5-11-10-8-4 2-5 6-5 11l-1 34-17-16c-5-5-12-1-11 5 0 3 2 5 5 8l22 21c-3 15-10 26-21 34z" stroke-width="2"/>
   </g>
-  <path d="M160 71c-41 0-70 31-70 78 0 47 28 77 70 77s70-30 70-77c0-47-29-78-70-78z" fill="#a9784b"/>
-  <path d="M92 121c-20-9-42-3-48 12-6 15 9 32 36 34l22-22zm136 0c20-9 42-3 48 12 6 15-9 32-36 34l-22-22z" fill="#a9784b"/>
-  <path d="M104 174c0 31 23 51 56 51s56-20 56-51c0-19-23-34-56-34s-56 15-56 34z" fill="#f2dec0"/>
-  <ellipse cx="160" cy="184" rx="18" ry="14" fill="#bd3b37"/>
-  <ellipse cx="133" cy="135" rx="6" ry="8" fill="#20342d"/>
-  <ellipse cx="187" cy="135" rx="6" ry="8" fill="#20342d"/>
-  <path d="M151 203q9 7 18 0" fill="none" stroke="#805437" stroke-linecap="round" stroke-width="4"/>
-  <path d="M103 151h114l-8 26H111z" fill="#bd3b37"/>
-  <path d="m194 171 19 4-13 34-20-8z" fill="#bd3b37"/>
-  <g fill="#f1ca73">
-    <path d="m128 160 4 8 9 1-7 6 2 8-8-4-7 4 1-8-6-6 9-1z"/>
-    <path d="m158 159 3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1z"/>
+  <g fill="#c69461">
+    <circle cx="111" cy="26" r="6"/>
+    <circle cx="82" cy="39" r="6"/>
+    <circle cx="269" cy="26" r="6"/>
+    <circle cx="298" cy="39" r="6"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M75 310c8-41 32-65 68-76l47 22 47-22c36 11 60 35 68 76v12H75z" fill="url(#fur)"/>
+    <path d="M149 239c5 31 18 51 41 68 23-17 36-37 41-68l-41 18z" fill="url(#muzzle)" opacity=".88"/>
+    <path d="M130 124c-21-26-49-33-67-18-17 14-9 39 15 53 15 9 33 10 54 4zm120 0c21-26 49-33 67-18 17 14 9 39-15 53-15 9-33 10-54 4z" fill="url(#fur)"/>
+    <path d="M89 119c-10-2-19 1-24 8 10 0 18 5 25 14m201-22c10-2 19 1 24 8-10 0-18 5-25 14" fill="none" stroke="#e1b68d" stroke-linecap="round" stroke-width="7"/>
+    <path d="M190 78c-58 0-91 40-91 103 0 43 14 74 40 90 14 8 32 12 51 12s37-4 51-12c26-16 40-47 40-90 0-63-33-103-91-103z" fill="url(#face)"/>
+    <path d="M119 110c18-19 41-28 71-28s53 9 71 28" fill="none" stroke="#e2bb8f" stroke-linecap="round" stroke-opacity=".28" stroke-width="7"/>
+    <g clip-path="url(#head-clip)" fill="none" stroke-linecap="round">
+      <path d="M115 113c12 5 22 13 29 24m-26 14c10 2 17 7 22 14m127-52c-12 5-22 13-29 24m26 14c-10 2-17 7-22 14" stroke="#e0b68a" stroke-opacity=".3" stroke-width="4"/>
+      <path d="M109 217c8 17 14 29 27 37m135-37c-8 17-14 29-27 37" stroke="#70482f" stroke-opacity=".23" stroke-width="4"/>
+    </g>
+    <ellipse cx="170" cy="163" rx="5" ry="7" fill="#302520"/>
+    <ellipse cx="210" cy="163" rx="5" ry="7" fill="#302520"/>
+    <circle cx="171.5" cy="161" r="1.7" fill="#fff"/>
+    <circle cx="211.5" cy="161" r="1.7" fill="#fff"/>
+    <path d="M190 178c-4 9-11 20-8 26 2 5 10 6 17 2" fill="none" stroke="#79513d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <path d="M116 210c8-23 35-38 74-38s66 15 74 38c-4 25-30 43-74 43s-70-18-74-43z" fill="url(#muzzle)"/>
+    <ellipse cx="190" cy="198" rx="17" ry="13" fill="#553a32"/>
+    <ellipse cx="185" cy="194" rx="5" ry="3" fill="#fff" fill-opacity=".52"/>
+    <path d="M175 225q15 12 30 0" fill="none" stroke="#77513c" stroke-linecap="round" stroke-width="4"/>
+    <path d="M102 222c26 17 55 25 88 25s62-8 88-25l-5 25c-24 17-51 26-83 26s-59-9-83-26z" fill="url(#scarf)"/>
+    <path d="m237 244 34 3-5 44-36-14z" fill="url(#scarf)"/>
+    <path d="M249 253 247 279m10-25-2 28" stroke="#f27f7d" stroke-linecap="round" stroke-opacity=".65" stroke-width="3"/>
+    <path d="M137 102c14-10 31-15 53-15s39 5 53 15" fill="none" stroke="url(#shine)" stroke-linecap="round" stroke-width="13"/>
   </g>
 </svg>

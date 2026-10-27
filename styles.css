@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --ink: #20342d;
-  --muted: #596961;
-  --forest: #164b3a;
-  --forest-dark: #10392d;
-  --berry: #bd3b37;
-  --paper: #f8f6ef;
-  --white: #fffefa;
-  --line: #dedfd3;
-  --gold: #d7ad60;
+  --ink: #382628;
+  --muted: #665356;
+  --forest: #b4232f;
+  --forest-dark: #7f1823;
+  --berry: #c62835;
+  --paper: #fffafa;
+  --white: #ffffff;
+  --line: #efd9db;
+  --gold: #a61f2b;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
@@ -115,8 +115,16 @@ main {
   padding: clamp(1.5rem, 5vw, 4rem) 1.5rem;
 }
 
+.map-layout {
+  display: grid;
+  width: min(100%, 1180px);
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
 .world-map {
-  width: min(100%, 1120px);
+  width: 100%;
   margin: 0;
 }
 
@@ -145,7 +153,30 @@ main {
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--berry);
-  box-shadow: 0 0 0 4px rgb(189 59 55 / 14%);
+  box-shadow: 0 0 0 4px rgb(198 40 53 / 14%);
+}
+
+.santa-portrait {
+  margin: 0;
+  padding: 1rem 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.santa-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.santa-portrait figcaption {
+  margin-top: 0.65rem;
+  color: var(--forest-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .page-content {
@@ -201,7 +232,7 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 1.25rem;
   background:
-    radial-gradient(ellipse at 50% 120%, rgb(215 173 96 / 20%), transparent 58%),
+    radial-gradient(ellipse at 50% 120%, rgb(198 40 53 / 9%), transparent 58%),
     var(--white);
 }
 
@@ -212,29 +243,42 @@ h1 {
 }
 
 .reindeer-image img {
-  width: min(100%, 270px);
-  max-height: 230px;
+  width: min(100%, 300px);
+  max-height: 260px;
 }
 
 .wishes {
+  counter-reset: wish;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.wish-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: 1.4rem;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--white);
+  list-style: none;
 }
 
-.wish-number {
+.wish-card {
+  counter-increment: wish;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.9rem;
+  padding: 1.25rem 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wish-card:last-child {
+  border-bottom: 0;
+}
+
+.wish-card::before {
+  content: counter(wish, decimal-leading-zero);
+  padding-top: 0.1rem;
   color: var(--berry);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
@@ -284,7 +328,7 @@ td {
 
 thead th {
   color: var(--forest-dark);
-  background: #edf1e9;
+  background: #f9e9eb;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
 }
@@ -300,7 +344,7 @@ tbody td {
 }
 
 tbody tr:nth-child(even) {
-  background: #fcfbf7;
+  background: #fff7f7;
 }
 
 .site-footer {
@@ -309,7 +353,7 @@ tbody tr:nth-child(even) {
   justify-content: space-between;
   gap: 1rem 2rem;
   padding: 1.4rem max(1.5rem, calc((100% - 1180px) / 2));
-  color: #e8eee8;
+  color: #fff5f5;
   background: var(--forest-dark);
 }
 
@@ -320,11 +364,11 @@ tbody tr:nth-child(even) {
 
 .site-footer p span {
   padding: 0 0.25rem;
-  color: #d8b86e;
+  color: #ffd9dc;
 }
 
 .site-footer a {
-  color: #e8eee8;
+  color: #fff5f5;
   font-size: 0.85rem;
 }
 
@@ -357,16 +401,36 @@ tbody tr:nth-child(even) {
     padding: 1.5rem 1rem;
   }
 
+  .map-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   .world-map img {
     border-radius: 0.8rem;
+  }
+
+  .santa-portrait {
+    display: grid;
+    grid-template-columns: minmax(0, 130px) 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 1rem;
+    text-align: left;
+  }
+
+  .santa-portrait figcaption {
+    margin: 0;
   }
 
   .page-content {
     width: min(100% - 2rem, 980px);
   }
 
-  .wishes {
-    grid-template-columns: 1fr;
+  .wish-card {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.65rem;
+    padding: 1.1rem;
   }
 
   .site-footer {
