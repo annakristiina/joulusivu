@@ -1,0 +1,389 @@
+:root {
+  color-scheme: light;
+  --ink: #20342d;
+  --muted: #596961;
+  --forest: #164b3a;
+  --forest-dark: #10392d;
+  --berry: #bd3b37;
+  --paper: #f8f6ef;
+  --white: #fffefa;
+  --line: #dedfd3;
+  --gold: #d7ad60;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--paper);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.7rem 1rem;
+  transform: translateY(-180%);
+  background: var(--white);
+  color: var(--forest-dark);
+  border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  width: min(100% - 3rem, 1180px);
+  min-height: 92px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-brand {
+  color: var(--forest);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav,
+.site-footer nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.85rem, 3vw, 2rem);
+}
+
+.site-nav a,
+.site-footer a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.site-nav a {
+  padding: 0.55rem 0;
+  color: var(--muted);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--forest);
+}
+
+.site-nav a[aria-current="page"] {
+  box-shadow: inset 0 -2px var(--berry);
+}
+
+main {
+  flex: 1;
+}
+
+.map-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 4rem) 1.5rem;
+}
+
+.world-map {
+  width: min(100%, 1120px);
+  margin: 0;
+}
+
+.world-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 48px rgb(32 52 45 / 10%);
+}
+
+.world-map figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1.1rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.map-key {
+  width: 0.7rem;
+  height: 0.7rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--berry);
+  box-shadow: 0 0 0 4px rgb(189 59 55 / 14%);
+}
+
+.page-content {
+  width: min(100% - 3rem, 980px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.intro {
+  max-width: 690px;
+  margin-bottom: 2.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--berry);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: var(--forest-dark);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.intro > p:last-child {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.feature-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  margin: 0 0 2.25rem;
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgb(215 173 96 / 20%), transparent 58%),
+    var(--white);
+}
+
+.feature-image img {
+  display: block;
+  width: min(100%, 340px);
+  max-height: 210px;
+}
+
+.reindeer-image img {
+  width: min(100%, 270px);
+  max-height: 230px;
+}
+
+.wishes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.wish-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--white);
+}
+
+.wish-number {
+  color: var(--berry);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.wish-card h2 {
+  margin-bottom: 0.45rem;
+  color: var(--forest-dark);
+  font-size: 1.1rem;
+}
+
+.wish-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--white);
+  scrollbar-color: var(--forest) var(--paper);
+}
+
+table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+caption {
+  padding: 1.2rem 1.25rem;
+  color: var(--forest-dark);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  color: var(--forest-dark);
+  background: #edf1e9;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+tbody th {
+  color: var(--forest);
+  font-weight: 800;
+}
+
+tbody td {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #fcfbf7;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 1.4rem max(1.5rem, calc((100% - 1180px) / 2));
+  color: #e8eee8;
+  background: var(--forest-dark);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.site-footer p span {
+  padding: 0 0.25rem;
+  color: #d8b86e;
+}
+
+.site-footer a {
+  color: #e8eee8;
+  font-size: 0.85rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    width: min(100% - 2rem, 1180px);
+    min-height: 0;
+    padding: 1.15rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+  }
+
+  .map-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .world-map img {
+    border-radius: 0.8rem;
+  }
+
+  .page-content {
+    width: min(100% - 2rem, 980px);
+  }
+
+  .wishes {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.35rem 1rem;
+  }
+
+  .site-footer nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-nav a,
+  .site-footer a {
+    transition: color 160ms ease;
+  }
+}

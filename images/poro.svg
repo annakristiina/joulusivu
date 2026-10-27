@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="title description">
+  <title id="title">Joulupukin poro</title>
+  <desc id="description">Ystävällinen ruskea poro, jolla on suuret sarvet ja punainen kaulahuivi.</desc>
+  <g fill="none" stroke="#8e633e" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+    <path d="M136 93c-24-20-37-39-35-63m1 19L78 37m28 0 16-19"/>
+    <path d="M184 93c24-20 37-39 35-63m-1 19 24-12m-28 0-16-19"/>
+  </g>
+  <path d="M160 71c-41 0-70 31-70 78 0 47 28 77 70 77s70-30 70-77c0-47-29-78-70-78z" fill="#a9784b"/>
+  <path d="M92 121c-20-9-42-3-48 12-6 15 9 32 36 34l22-22zm136 0c20-9 42-3 48 12 6 15-9 32-36 34l-22-22z" fill="#a9784b"/>
+  <path d="M104 174c0 31 23 51 56 51s56-20 56-51c0-19-23-34-56-34s-56 15-56 34z" fill="#f2dec0"/>
+  <ellipse cx="160" cy="184" rx="18" ry="14" fill="#bd3b37"/>
+  <ellipse cx="133" cy="135" rx="6" ry="8" fill="#20342d"/>
+  <ellipse cx="187" cy="135" rx="6" ry="8" fill="#20342d"/>
+  <path d="M151 203q9 7 18 0" fill="none" stroke="#805437" stroke-linecap="round" stroke-width="4"/>
+  <path d="M103 151h114l-8 26H111z" fill="#bd3b37"/>
+  <path d="m194 171 19 4-13 34-20-8z" fill="#bd3b37"/>
+  <g fill="#f1ca73">
+    <path d="m128 160 4 8 9 1-7 6 2 8-8-4-7 4 1-8-6-6 9-1z"/>
+    <path d="m158 159 3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1z"/>
+  </g>
+</svg>
