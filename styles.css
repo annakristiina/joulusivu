@@ -180,19 +180,18 @@ main {
 }
 
 .joulupukki-taivaalla {
-  display: flex;
-  justify-content: center;
   width: 80%;
   margin: 0 auto;
-  padding: 1rem 1rem 1.15rem;
+  padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 1.25rem;
 }
 
 .joulupukki-taivaalla img {
-    display: block;
-    width: 80%;
-    height: auto;
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .page-content {
