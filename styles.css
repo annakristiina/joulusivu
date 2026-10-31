@@ -215,7 +215,7 @@ h1 {
 
 h1 span {
   font-size: 1.5em;
-  color: var(--gold);
+  color: var(--ink);
 }
 
 .intro > p:last-child {
