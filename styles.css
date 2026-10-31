@@ -179,6 +179,19 @@ main {
   line-height: 1.5;
 }
 
+.joulupukki-taivaalla {
+  margin: 0;
+  padding: 1rem 1 rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+}
+
+  .joulupukki-taivaalla img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .page-content {
   width: min(100% - 3rem, 980px);
   margin: 0 auto;
