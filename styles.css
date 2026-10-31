@@ -395,6 +395,9 @@ tbody tr:nth-child(even) {
   padding: 1.4rem max(1.5rem, calc((100% - 1180px) / 2));
   color: #fff5f5;
   background: var(--forest-dark);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .site-footer p {
