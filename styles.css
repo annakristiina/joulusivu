@@ -180,6 +180,7 @@ main {
 }
 
 .joulupukki-taivaalla {
+  grid-column: 1 / -1;
   justify-self: center;
   box-sizing: border-box;
   width: min(80%, 700px);
