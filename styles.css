@@ -77,8 +77,8 @@ a:focus-visible {
 }
 
 .site-logo {
-  width: 10px;
-  height: 40rem;
+  width: 20px;
+  height: auto;
 }
 
 .site-nav,
