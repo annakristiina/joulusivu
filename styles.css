@@ -181,7 +181,8 @@ main {
 
 .joulupukki-taivaalla {
   width: 80%;
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 1.25rem;
